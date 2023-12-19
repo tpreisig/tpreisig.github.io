@@ -5,22 +5,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(darkcyan, darkslateblue);
+    background: linear-gradient(320deg, rgba(0, 0, 0, 0.9), navy);
     font-family: "Roboto";
     color: lightblue;
 }
+
 .porter {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     animation: change 1s linear infinite;
 
 }
+
 .porter span {
     position: absolute;
     top: 0;
@@ -30,47 +33,48 @@ body {
     transform: rotate(calc(36deg * var(--i)));
     letter-spacing: 0.025rem;
 }
+
 .porter span::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 25px;
-    height: 25px;
+    width: 120px;
+    height: 40px;
     border-radius: 50%;
     border: 1px solid azure;
-    box-shadow: 
-      0px   0px 10px yellow,
-    -20px -20px  0px azure,
-    -30px -30px 0px  blue,
-      0px   0px 35px azure,
-    -30px -30px 30px yellow,
-     -2px  20px  2px orangered,
-    -20px  80px  1px lawngreen;
+    box-shadow:
+        0px 0px 10px yellow,
+        -20px -20px 0px azure,
+        -30px -30px 0px blue,
+        0px 0px 12px azure,
+        -30px -30px 2px yellow,
+        -2px 20px 2px orangered,
+        -20px 80px 1px lawngreen;
 
     background: transparent;
-    animation: animate 1s linear infinite;
+    animation: animate 5s linear infinite;
 }
+
 @keyframes animate {
-    0%
-    {
+    0% {
         transform: rotate(0deg);
         filter: hue-rotate(0deg);
     }
-    100%
-    {
+
+    100% {
         transform: rotate(360deg);
         filter: hue-rotate(360deg);
     }
 }
+
 @keyframes change {
-    0%
-    {
+    0% {
         filter: hue-rotate(0deg);
 
     }
-    100%
-    {
+
+    100% {
         filter: hue-rotate(180deg);
     }
 }
@@ -84,5 +88,7 @@ body {
     text-align: center;
     font-size: 2rem;
     padding: 0 20px;
-    text-shadow: 0px 1px 20px white;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    font-size: 40px;
+    color: lime;
 }
